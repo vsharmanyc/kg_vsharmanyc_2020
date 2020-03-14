@@ -9,11 +9,14 @@ def isMapping(s1, s2):
 		if mapping.setdefault(s1[i],s2[i]) != s2[i]:
 			print("{ " + s1[i] +  " , "  + mapping[s1[i]] + ' }  ... ' + s2[i])
 			return False
-			
+
 	return True
 
 
 if len(sys.argv) >= 3:
-	print(isMapping(sys.argv[1], sys.argv[2]))
+	if(isMapping(sys.argv[1], sys.argv[2])):
+		print("true")
+	else:
+		print("false")
 else:
 	print("Invalid usage. Must provide two arguments")
